@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="mendix.datasourcebug.DatasourceBug" pluginWidget="true" needsEntityContext="true"
+    offlineCapable="true"
+    supportedPlatform="Web"
+    xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Datasource Bug</name>
+    <description>My widget description</description>
+    <icon />
+    <properties>
+        <propertyGroup caption="General">
+            <propertyGroup caption="Label">
+                <systemProperty key="Label"></systemProperty>
+            </propertyGroup>
+            <propertyGroup caption="Selectable Objects">
+                <property key="dataSource" type="datasource" required="true" isList="true">
+                    <caption>Data source</caption>
+                    <description></description>
+                </property>
+                <property key="content" type="attribute" required="true" dataSource="dataSource">
+                    <caption>Display attribute</caption>
+                    <description></description>
+                    <attributeTypes>
+                        <attributeType name="String" />
+                    </attributeTypes>
+                </property>
+                <property key="limit" type="expression" required="true" defaultValue="5">
+                    <caption>Limit</caption>
+                    <description></description>
+                    <returnType type="Integer" />
+                </property>
+            </propertyGroup>
+            <propertyGroup caption="Reference">
+                <property key="association" type="association" required="true"
+                    selectableObjects="dataSource">
+                    <caption>Association</caption>
+                    <description></description>
+                    <associationTypes>
+                        <associationType name="Reference" />
+                    </associationTypes>
+                </property>
+            </propertyGroup>
+        </propertyGroup>
+    </properties>
+</widget>

@@ -1,0 +1,7 @@
+/*
+Place your custom CSS here
+*/
+.test-info {
+    display: flex;
+    gap: 1rem;
+}
