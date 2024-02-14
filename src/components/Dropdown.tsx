@@ -19,7 +19,11 @@ export function Dropdown(props: DatasourceBugContainerProps): ReactElement {
     );
 
     //Apply initial limit
-    useEffect(() => {
+    // useEffect(() => {
+    //     console.info("set the limit to 0", props.dataSource.status);
+    //     props.dataSource.setLimit(0);
+    // }, []);
+    useMemo(() => {
         console.info("set the limit to 0", props.dataSource.status);
         props.dataSource.setLimit(0);
     }, []);
